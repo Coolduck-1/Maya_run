@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://buwj7ujgjki16"]
+
+[ext_resource type="Texture2D" uid="uid://dtuhbx21u6hh5" path="res://sprites/Maya sprite.png" id="1_8b0cx"]
+[ext_resource type="Script" uid="uid://dlj3b2wleeer3" path="res://scripts/maya.gd" id="1_ki677"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3xsgg"]
+atlas = ExtResource("1_8b0cx")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_di2cf"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3xsgg")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="Maya" type="CharacterBody2D" unique_id=395560289]
+script = ExtResource("1_ki677")
+
+[node name="Maya_sprite" type="AnimatedSprite2D" parent="." unique_id=1229576689]
+sprite_frames = SubResource("SpriteFrames_di2cf")
+animation = &"new_animation"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1694582060]
+visible = false
+polygon = PackedVector2Array(0, 0, 8, 32, -1, 32, -1, 23, -6, 21, -6, 0, -12, -3, -12, -8, -7, -7, -11, -17, -8, -26, 8, -22, 12, -15, 10, -7, 11, -1, 9, 0, 9, 12, 11, 12, 10, 21, 7, 24)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2009687860]

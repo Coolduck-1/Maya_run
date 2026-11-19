@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Maya run"
+config/name="maya run"
+run/main_scene="uid://ksb8w3d6fb51"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
