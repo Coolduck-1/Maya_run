@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://da6f8pgxk3783"]
+
+[ext_resource type="Script" uid="uid://ly8nbvst0lbu" path="res://scripts/coco.gd" id="1_ilpcc"]
+[ext_resource type="Texture2D" uid="uid://8wm0b81lrhfr" path="res://sprites/Coco sprite.png" id="1_q71tw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ilpcc"]
+atlas = ExtResource("1_q71tw")
+region = Rect2(0, 0, 36, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l885e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ilpcc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Coco" type="CharacterBody2D" unique_id=1310370554]
+position = Vector2(-1, 0)
+script = ExtResource("1_ilpcc")
+
+[node name="Coco_sprite" type="AnimatedSprite2D" parent="." unique_id=548365631]
+position = Vector2(1.0190005, 0.37399864)
+scale = Vector2(0.49894443, 0.51558334)
+sprite_frames = SubResource("SpriteFrames_l885e")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=2107400985]
+position = Vector2(-2, 5)
+scale = Vector2(0.359, 0.327)
+polygon = PackedVector2Array(8, -42, 13, -42, 15, -35, 16, -27, 15, -20, 15, -15, 11, -11, 13, 12, 8, 13, 9, 18, 11, 21, 11, 24, 2, 24, 2, 13, -1, 12, -2, 10, -7, 12, -12, 9, -13, 2, -8, 1, -6, 0, -7, -10, -10, -24, -2, -38, 8, -40)

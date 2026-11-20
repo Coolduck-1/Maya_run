@@ -23,15 +23,19 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Maya" type="CharacterBody2D" unique_id=395560289]
+[node name="Maya" type="CharacterBody2D" unique_id=395560289 groups=["player"]]
 script = ExtResource("1_ki677")
 
 [node name="Maya_sprite" type="AnimatedSprite2D" parent="." unique_id=1229576689]
+scale = Vector2(0.359375, 0.359375)
 sprite_frames = SubResource("SpriteFrames_di2cf")
 animation = &"new_animation"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1694582060]
-visible = false
+position = Vector2(1.013279e-06, -0.09913945)
+scale = Vector2(0.36458337, 0.3663793)
 polygon = PackedVector2Array(0, 0, 8, 32, -1, 32, -1, 23, -6, 21, -6, 0, -12, -3, -12, -8, -7, -7, -11, -17, -8, -26, 8, -22, 12, -15, 10, -7, 11, -1, 9, 0, 9, 12, 11, 12, 10, 21, 7, 24)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2009687860]
+position = Vector2(2, 0)
+zoom = Vector2(4, 4)

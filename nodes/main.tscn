@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://buwj7ujgjki16" path="res://nodes/maya.tscn" id="1_a3ry3"]
 [ext_resource type="PackedScene" uid="uid://bb5m00del4648" path="res://nodes/level.tscn" id="2_ufc4x"]
+[ext_resource type="PackedScene" uid="uid://da6f8pgxk3783" path="res://nodes/coco.tscn" id="3_ufc4x"]
 
 [node name="Main" type="Node" unique_id=990853263]
 
@@ -9,3 +10,7 @@
 position = Vector2(0, 91)
 
 [node name="Maya" parent="." unique_id=395560289 instance=ExtResource("1_a3ry3")]
+position = Vector2(-147, -35)
+
+[node name="Coco" parent="." unique_id=1310370554 instance=ExtResource("3_ufc4x")]
+position = Vector2(100, 6)
